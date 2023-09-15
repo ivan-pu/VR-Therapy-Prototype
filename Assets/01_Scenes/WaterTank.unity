@@ -278,17 +278,17 @@ PrefabInstance:
     - target: {fileID: 8805898326981163083, guid: c5e8ac12655ba8d418d8175d8e811264,
         type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 1
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 8805898326981163083, guid: c5e8ac12655ba8d418d8175d8e811264,
         type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 0.91
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8805898326981163083, guid: c5e8ac12655ba8d418d8175d8e811264,
         type: 3}
       propertyPath: ShapeModule.m_Scale.z
-      value: 0.69
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 8805898326981163083, guid: c5e8ac12655ba8d418d8175d8e811264,
         type: 3}
@@ -691,8 +691,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0.7080812, g: 0.9750453, b: 0.9811321, a: 1}
+  m_Intensity: 1.07
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -735,7 +735,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 7141
+  m_ColorTemperature: 7104
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -2068,6 +2068,60 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1818152901}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1134808483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1134808485}
+  - component: {fileID: 1134808484}
+  m_Layer: 0
+  m_Name: StateController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1134808484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134808483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e853825f4046bb24fb6a3b4e27474274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generalEmitter: {fileID: 1082339270928691652}
+  geStartValue: 0.00001
+  geEndValue: 0.00005
+  dedicatedEmitter: {fileID: 1738490666}
+  deStartValue: 0.00001
+  deEndValue: 0.00008
+  waterMesh: {fileID: 588922000}
+  waterMaterial: {fileID: 0}
+  colorStartValue: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+  colorEndValue: {r: 0.31764707, g: 0.5019608, b: 0.7254902, a: 1}
+--- !u!4 &1134808485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134808483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.57377577, y: 0.4610543, z: 1.3864843}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208479107
 GameObject:
@@ -3491,6 +3545,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 1134808485}
   - {fileID: 97125686}
   - {fileID: 1818152900}
   - {fileID: 776413033}
