@@ -44,18 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e853825f4046bb24fb6a3b4e27474274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionTime: 10
+  transitionTime: 60
   pinchChangeController: {fileID: 0}
   generalEmitter: {fileID: 0}
-  geStartValue: 0.00001
+  geStartValue: 0
   geEndValue: 0.00002
-  dedicatedEmitter: {fileID: 0}
-  deStartValue: 0.00001
-  deEndValue: 0.00003
   waterMesh: {fileID: 0}
   waterMaterial: {fileID: 0}
   colorStartValue: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   colorEndValue: {r: 0.31764707, g: 0.5019608, b: 0.7254902, a: 1}
   rainParticles: {fileID: 0}
-  RPStartEmission: 35
-  RPEndEmission: 80
+  RPStartEmission: 15
+  RPEndEmission: 100

@@ -68,13 +68,13 @@ public class PinchChangeController : MonoBehaviour
 
     void UpdateSoundLevel()
     {
-        soundCurrentLevel = Mathf.Clamp(soundStartLevel + (currentDistance - startDistance) * soundSensitivity, soundMinValue, soundMaxValue);
+        soundCurrentLevel = Mathf.Clamp(soundStartLevel - (currentDistance - startDistance) * soundSensitivity, soundMinValue, soundMaxValue);
         if (rainSound) rainSound.volume = soundCurrentLevel;
     }
 
     void UpdateRainLevel()
     {
-        rainCurrentLevel = Mathf.Clamp(rainStartLevel + (currentDistance - startDistance) * rainSensitivity, geMinValue, geMaxValue);
+        rainCurrentLevel = Mathf.Clamp(rainStartLevel - (currentDistance - startDistance) * rainSensitivity, geMinValue, geMaxValue);
         generalEmitter.VolumePerSimTime = rainCurrentLevel;
     }
 }

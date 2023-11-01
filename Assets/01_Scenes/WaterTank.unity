@@ -2686,8 +2686,8 @@ Transform:
   m_GameObject: {fileID: 923924743}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.016128825, y: -2.017, z: 0.007879406}
-  m_LocalScale: {x: 1, y: 34.160778, z: 1}
+  m_LocalPosition: {x: 0.0195, y: -2.017, z: 0.0535}
+  m_LocalScale: {x: 0.47789857, y: 34.160778, z: 0.75547224}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 844619}
@@ -2718,7 +2718,7 @@ Transform:
   m_GameObject: {fileID: 1009391792}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.016128825, y: -2.115081, z: -0.42212057}
+  m_LocalPosition: {x: 0.016128825, y: -2.115081, z: -0.356}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4353,11 +4353,6 @@ PrefabInstance:
       objectReference: {fileID: 588922000}
     - target: {fileID: 2155422860523584252, guid: a09e402572dc2ec4bad5126d58beebcf,
         type: 3}
-      propertyPath: RPEndEmission
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2155422860523584252, guid: a09e402572dc2ec4bad5126d58beebcf,
-        type: 3}
       propertyPath: rainParticles
       value: 
       objectReference: {fileID: 1375326652}
@@ -4366,16 +4361,6 @@ PrefabInstance:
       propertyPath: generalEmitter
       value: 
       objectReference: {fileID: 1082339270928691652}
-    - target: {fileID: 2155422860523584252, guid: a09e402572dc2ec4bad5126d58beebcf,
-        type: 3}
-      propertyPath: RPStartEmission
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2155422860523584252, guid: a09e402572dc2ec4bad5126d58beebcf,
-        type: 3}
-      propertyPath: dedicatedEmitter
-      value: 
-      objectReference: {fileID: 1738490666}
     - target: {fileID: 2155422860523584252, guid: a09e402572dc2ec4bad5126d58beebcf,
         type: 3}
       propertyPath: pinchChangeController
@@ -4894,7 +4879,7 @@ PrefabInstance:
     - target: {fileID: 2519462458635328078, guid: eea85e8ae7874064bb61f2b9eab782f5,
         type: 3}
       propertyPath: geMinValue
-      value: 0.00001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519462458635328078, guid: eea85e8ae7874064bb61f2b9eab782f5,
         type: 3}
