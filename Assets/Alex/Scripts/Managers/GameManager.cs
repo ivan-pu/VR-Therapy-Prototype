@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,12 +13,18 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
     }
-
+    [Title("Managers")]
     [SerializeField] VoiceoverManager voiceoverManager;
     public VoiceoverManager VoiceoverManager { get => voiceoverManager; }
 
     [SerializeField] FlowManager flowManager;
     public FlowManager FlowManager { get => flowManager;}
 
+    [SerializeField] OptionManager optionManager;
+    public OptionManager OptionManager { get => optionManager; }
+
+    [Title("References")]
+    [SerializeField] WaterTankMover waterTankMover;
+    public WaterTankMover WaterTankMover { get => waterTankMover; }
 
 }

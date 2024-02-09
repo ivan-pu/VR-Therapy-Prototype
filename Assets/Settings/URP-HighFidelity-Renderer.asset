@@ -70,7 +70,8 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
   - {fileID: -4965376514586457545}
-  m_RendererFeatureMap: adc0de57c6d2eee537ca01205e7017bb
+  - {fileID: 7057496758475721876}
+  m_RendererFeatureMap: adc0de57c6d2eee537ca01205e7017bb948c6adce843f161
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -113,3 +114,20 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &7057496758475721876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3905e9c7f94c7b4e8ebd3d0d31e649d, type: 3}
+  m_Name: SunFogRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    IsEnabled: 1
+    WhenToInsert: 450
+    ditherTexture: {fileID: 2800000, guid: c288a3b9efda40b498a0d2b486251af4, type: 3}

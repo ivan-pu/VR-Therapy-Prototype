@@ -7,11 +7,10 @@ public class WaterTankMover : MonoBehaviour
 {
     [SerializeField] Transform waterTank;
 
-    public Vector3 worldTargetPosition;
-
-    public void StartMove()
+    public void StartMove(Vector3 worldTargetPos, float t)
     {
-        waterTank.DOMove(worldTargetPosition, 1f);
+        waterTank.DOPause();
+        waterTank.DOMove(worldTargetPos, t);
     }
-
+    
 }
