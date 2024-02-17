@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: Option Data 1
   m_EditorClassIdentifier: 
   options:
-  - Select Me
-  - No, Select Me!
+  - optionText: Select me
+    changedVoiceover: 0
+    targetPhase: 0
+    targetVoiceoverIndex: 0
+  - optionText: No Select me
+    changedVoiceover: 0
+    targetPhase: 0
+    targetVoiceoverIndex: 0

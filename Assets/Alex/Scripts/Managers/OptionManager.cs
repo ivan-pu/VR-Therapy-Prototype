@@ -9,17 +9,21 @@ public class OptionManager : MonoBehaviour
 
     List<Option> generatedOptions = new List<Option>();
 
-    public void GenerateOptions(List<string> optionTexts)
+    bool isChoosing = false;
+    public bool IsChoosing { get => isChoosing; set => isChoosing = value; }
+
+    public void GenerateOptions(List<OptionInfo> optionInfos)
     {
         generatedOptions.Clear();
-        for (int i = 0; i < optionTexts.Count; i++)
+        for (int i = 0; i < optionInfos.Count; i++)
         {
             if (i < optionPos.Count)
             {
                 Option o = Instantiate(optionPrefab, optionPos[i].position, optionPos[i].rotation, optionPos[i]);
-                o.SetText(optionTexts[i]);
+                o.SetOption(optionInfos[i]);
                 generatedOptions.Add(o);
             }
         }
+        isChoosing = true;
     }
 }

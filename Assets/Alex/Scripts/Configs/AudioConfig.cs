@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+public class PhaseVoiceover
+{
+    public List<AudioClip> audios;
+}
+
+[System.Serializable]
 [CreateAssetMenu(fileName = "Audio Data", menuName = "Custom Data/Audio Data")]
 public class AudioConfig : ScriptableObject
 {
@@ -11,13 +17,19 @@ public class AudioConfig : ScriptableObject
     public AudioClip clip_BGM;
     [Header("Voiceover")]
     [Title("Phase 1")]
-    public List<AudioClip> phase1_Voiceovers;
+    [SerializeField]
+    public List<PhaseVoiceover> phase1_Voiceovers ;
     [Title("Phase 2")]
-    public List<AudioClip> phase2_Voiceovers;
+    [SerializeField]
+    public List<PhaseVoiceover> phase2_Voiceovers;
     [Title("Phase 3")]
-    public List<AudioClip> phase3_Voiceovers;
+    [SerializeField]
+    public List<PhaseVoiceover> phase3_Voiceovers;
     [Title("Phase 4")]
-    public List<AudioClip> phase4_Voiceovers;
+    [SerializeField]
+    public List<PhaseVoiceover> phase4_Voiceovers;
     [Title("Phase 5")]
-    public List<AudioClip> phase5_Voiceovers;
+    [SerializeField]
+    public List<PhaseVoiceover> phase5_Voiceovers;
+
 }

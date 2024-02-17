@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip_BGM: {fileID: 0}
   phase1_Voiceovers:
-  - {fileID: 8300000, guid: 2cfa96c21e4f54c20824bd26cd46c10f, type: 3}
-  - {fileID: 8300000, guid: 33a0d552717ab4c2e87a77c856d9aaf3, type: 3}
-  - {fileID: 8300000, guid: a05d082cd207b4b12a47c089be8b7a62, type: 3}
-  phase2_Voiceovers: []
+  - audios:
+    - {fileID: 8300000, guid: f91d65267a08748519645f34d4358e48, type: 3}
+    - {fileID: 8300000, guid: a05d082cd207b4b12a47c089be8b7a62, type: 3}
+    - {fileID: 8300000, guid: b70c21d718005834ca7e7f3c7a6fdd88, type: 3}
+  phase2_Voiceovers:
+  - audios:
+    - {fileID: 8300000, guid: 6ad851833fd5df24c84fbadccdab63d2, type: 3}
+    - {fileID: 8300000, guid: 494bd1721199a40c5a79fa3011793556, type: 3}
   phase3_Voiceovers: []
   phase4_Voiceovers: []
   phase5_Voiceovers: []

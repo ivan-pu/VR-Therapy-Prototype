@@ -16,56 +16,69 @@ public class VoiceoverManager : MonoBehaviour
     [Title("Audio Config")]
     public AudioConfig audioConfig;
 
+    public Dictionary<FlowPhase, int> phaseVoiceoverTable = new Dictionary<FlowPhase, int>();
+
+    public void SetPhaseVoiceover(FlowPhase targetPhase, int targetIndex)
+    {
+        if(phaseVoiceoverTable.ContainsKey(targetPhase))
+            phaseVoiceoverTable[targetPhase] = targetIndex;
+    }
+
     private void Awake()
     {
         audioSource_BGM.clip = audioConfig.clip_BGM;
         audioSource_BGM.Play();
+        phaseVoiceoverTable.Add(FlowPhase.Phase_1, 0);
+        phaseVoiceoverTable.Add(FlowPhase.Phase_2, 0);
+        phaseVoiceoverTable.Add(FlowPhase.Phase_3, 0);
+        phaseVoiceoverTable.Add(FlowPhase.Phase_4, 0);
+        phaseVoiceoverTable.Add(FlowPhase.Phase_5, 0);
     }
 
     [Button]
-    public AudioClip PlayVoiceover(FlowPhase phase, int index)
+    public AudioClip PlayVoiceover(FlowPhase phase, int voiceoverIndex)
     {
-        List<AudioClip> audioclips;
+        PhaseVoiceover audioclips;
         audioSource_Voiceover.clip = null;
         switch (phase)
         {
             case FlowPhase.Phase_1:
-                audioclips = audioConfig.phase1_Voiceovers;
-                if (audioclips.Count > index)
+                audioclips = audioConfig.phase1_Voiceovers[phaseVoiceoverTable[FlowPhase.Phase_1]];
+                if (audioclips.audios.Count > voiceoverIndex)
                 {
-                    audioSource_Voiceover.clip = audioclips[index];
+                    audioSource_Voiceover.clip = audioclips.audios[voiceoverIndex];
                     audioSource_Voiceover.Play();
                 }
                 break;
             case FlowPhase.Phase_2:
-                audioclips = audioConfig.phase2_Voiceovers;
-                if (audioclips.Count > index)
+                audioclips = audioConfig.phase2_Voiceovers[phaseVoiceoverTable[FlowPhase.Phase_2]];
+                if (audioclips.audios.Count > voiceoverIndex)
                 {
-                    audioSource_Voiceover.clip = audioclips[index];
+                    audioSource_Voiceover.clip = audioclips.audios[voiceoverIndex];
                     audioSource_Voiceover.Play();
                 }
                 break;
             case FlowPhase.Phase_3:
-                audioclips = audioConfig.phase3_Voiceovers;
-                if (audioclips.Count > index)
+                audioclips = audioConfig.phase3_Voiceovers[phaseVoiceoverTable[FlowPhase.Phase_3]];
+                if (audioclips.audios.Count > voiceoverIndex)
                 {
-                    audioSource_Voiceover.clip = audioclips[index];
+                    audioSource_Voiceover.clip = audioclips.audios[voiceoverIndex];
                     audioSource_Voiceover.Play();
                 }
                 break;
             case FlowPhase.Phase_4:
-                audioclips = audioConfig.phase4_Voiceovers;
-                if (audioclips.Count > index)
+                audioclips = audioConfig.phase4_Voiceovers[phaseVoiceoverTable[FlowPhase.Phase_4]];
+                if (audioclips.audios.Count > voiceoverIndex)
                 {
-                    audioSource_Voiceover.clip = audioclips[index];
+                    audioSource_Voiceover.clip = audioclips.audios[voiceoverIndex];
                     audioSource_Voiceover.Play();
                 }
                 break;
             case FlowPhase.Phase_5:
-                audioclips = audioConfig.phase5_Voiceovers;
-                if (audioclips.Count > index)
+                audioclips = audioConfig.phase5_Voiceovers[phaseVoiceoverTable[FlowPhase.Phase_5]];
+                if (audioclips.audios.Count > voiceoverIndex)
                 {
-                    audioSource_Voiceover.clip = audioclips[index];
+                    audioSource_Voiceover.clip = audioclips.audios[voiceoverIndex];
                     audioSource_Voiceover.Play();
                 }
                 break;

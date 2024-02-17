@@ -24,7 +24,12 @@ public class GameManager : MonoBehaviour
     public OptionManager OptionManager { get => optionManager; }
 
     [Title("References")]
-    [SerializeField] WaterTankMover waterTankMover;
-    public WaterTankMover WaterTankMover { get => waterTankMover; }
+    [SerializeField] ObjectMover waterTankMover;
+    public ObjectMover WaterTankMover { get => waterTankMover; }
+
+    [Title("References")]
+    [SerializeField] ObjectMover manMover;
+    public ObjectMover ManMover { get => manMover; }
+
 
 }

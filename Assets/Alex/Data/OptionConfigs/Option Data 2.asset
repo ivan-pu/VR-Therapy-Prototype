@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: Option Data 2
   m_EditorClassIdentifier: 
   options:
-  - 12345
-  - 67890
+  - optionText: 12345
+    changedVoiceover: 0
+    targetPhase: 0
+    targetVoiceoverIndex: 0
+  - optionText: 56789
+    changedVoiceover: 0
+    targetPhase: 0
+    targetVoiceoverIndex: 0
