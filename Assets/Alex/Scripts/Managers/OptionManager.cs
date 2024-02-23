@@ -26,4 +26,13 @@ public class OptionManager : MonoBehaviour
         }
         isChoosing = true;
     }
+
+    public void DestroyAllOptions()
+    {
+        for(int i = generatedOptions.Count - 1; i >= 0; i--)
+        {
+            Destroy(generatedOptions[i].gameObject);
+        }
+        generatedOptions.Clear();
+    }
 }

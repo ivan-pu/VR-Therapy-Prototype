@@ -3,6 +3,7 @@ using NodeCanvas.Framework;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -32,31 +33,50 @@ public class FlowManager : MonoBehaviour
     private event PhaseStartDelegate phase4StartEvent;
     private event PhaseStartDelegate phase5StartEvent;
 
+    private void Awake()
+    {
+        curPhase = FlowPhase.Idle;
+    }
+
     [Button]
     public void StartPhase(FlowPhase newPhase)
     {
+        if (curPhase == newPhase)
+        {
+            return;
+        }
         curPhase = newPhase;
+        flow1.gameObject.SetActive(false);
+        flow2.gameObject.SetActive(false);
+        flow3.gameObject.SetActive(false);
+        flow4.gameObject.SetActive(false);
+        flow5.gameObject.SetActive(false);
         switch (newPhase)
         {
             case FlowPhase.Idle:
                 break;
             case FlowPhase.Phase_1:
+                flow1.gameObject.SetActive(true);
                 phase1StartEvent?.Invoke();
                 flow1.StartBehaviour();
                 break;
             case FlowPhase.Phase_2:
+                flow2.gameObject.SetActive(true);
                 phase2StartEvent?.Invoke();
                 flow2.StartBehaviour();
                 break;
             case FlowPhase.Phase_3:
+                flow3.gameObject.SetActive(true);
                 phase3StartEvent?.Invoke();
                 flow3.StartBehaviour();
                 break;
-            case FlowPhase.Phase_4:     
+            case FlowPhase.Phase_4:
+                flow4.gameObject.SetActive(true);
                 phase4StartEvent?.Invoke();
                 flow4.StartBehaviour();
                 break;
             case FlowPhase.Phase_5:
+                flow5.gameObject.SetActive(true);
                 phase5StartEvent?.Invoke();
                 flow5.StartBehaviour();
                 break;

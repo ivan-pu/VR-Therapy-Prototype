@@ -375,6 +375,10 @@ MonoBehaviour:
       Constrain: 0
       Value: 0
   text: {fileID: 878938335842153645}
+  detectReceiverRadius: 0.04
+  receiverLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!54 &2115312074563663472
 Rigidbody:
   m_ObjectHideFlags: 0

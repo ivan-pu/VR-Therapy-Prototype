@@ -80,4 +80,10 @@ public class Option : OneGrabTranslateTransformer, ITransformer
     {
         Debug.Log("Grab" + gameObject.name);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectReceiverRadius);
+    }
 }
