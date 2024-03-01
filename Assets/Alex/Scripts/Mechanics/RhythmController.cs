@@ -36,6 +36,8 @@ public class RhythmController : MonoBehaviour
     [SerializeField] float time3;
     [SerializeField] float matchTime3;
 
+    [SerializeField] int maxFailTime = 2;
+
     float timer;
     [SerializeField][ReadOnly] RhythmPhase lastRhythmPhase;
     [SerializeField][ReadOnly]RhythmPhase curRhythmPhase;
@@ -45,7 +47,8 @@ public class RhythmController : MonoBehaviour
     Vector3 localRightMax;
 
     float matchTimer;
-    [SerializeField] bool curPhaseFinished = false;
+    [SerializeField][ReadOnly] bool curPhaseFinished = false;
+    [SerializeField][ReadOnly] int failTime = 0;
 
     private void Awake()
     {
@@ -82,12 +85,20 @@ public class RhythmController : MonoBehaviour
         }
     }
 
+    public bool CanStartNextPhase()
+    {
+        return curRhythmPhase == RhythmPhase.Idle && nextRhythmPhase != RhythmPhase.Idle;
+    }
+
     [Button]
     public void StartNextPhase()
     {
-        StartPhase(nextRhythmPhase);
-        if(nextRhythmPhase != RhythmPhase.Idle)
+        if (nextRhythmPhase != RhythmPhase.Idle)
+        {
             curPhaseFinished = false;
+            failTime = 0;
+        }
+        StartPhase(nextRhythmPhase);
     }
 
     private void Update()
@@ -133,11 +144,15 @@ public class RhythmController : MonoBehaviour
             cursorLeft.localPosition = localOrigin;
             cursorRight.localPosition = localOrigin;
             curPhaseFinished = (matchTimer >= matchTime);
+            if (!curPhaseFinished && failTime >= maxFailTime)
+                curPhaseFinished = true;
+            else
+                failTime += 1;
             StartPhase(RhythmPhase.Idle);
         }
     }
 
-    bool CheckCurPhaseFinish()
+    public bool CheckCurPhaseFinish()
     {
         return curPhaseFinished;
     }

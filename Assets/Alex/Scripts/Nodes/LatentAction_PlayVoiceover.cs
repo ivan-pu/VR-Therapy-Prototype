@@ -8,9 +8,9 @@ public class LatentAction_PlayVoiceover : LatentActionNode<FlowPhase, int>
 {
     public float timeLeft { get; private set; }
     public float normalized { get; private set; }
-    public override IEnumerator Invoke(FlowPhase phase, int voiceoverInex)
+    public override IEnumerator Invoke(FlowPhase phase, int voiceoverIndex)
     {
-        AudioClip clip = GameManager.Instance.VoiceoverManager.PlayVoiceover(phase, voiceoverInex);
+        AudioClip clip = GameManager.Instance.VoiceoverManager.PlayVoiceover(phase, voiceoverIndex);
         if (clip != null)
             timeLeft = clip.length;
         else

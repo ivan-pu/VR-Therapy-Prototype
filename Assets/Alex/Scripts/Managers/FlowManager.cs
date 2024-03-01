@@ -46,11 +46,11 @@ public class FlowManager : MonoBehaviour
             return;
         }
         curPhase = newPhase;
-        flow1.gameObject.SetActive(false);
+        /*flow1.gameObject.SetActive(false);
         flow2.gameObject.SetActive(false);
         flow3.gameObject.SetActive(false);
         flow4.gameObject.SetActive(false);
-        flow5.gameObject.SetActive(false);
+        flow5.gameObject.SetActive(false);*/
         switch (newPhase)
         {
             case FlowPhase.Idle:
