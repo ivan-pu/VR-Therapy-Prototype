@@ -28,5 +28,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 523f822c1c7b699489c49fea2353c2de, type: 3}
     - {fileID: 8300000, guid: 9a752d3328516a44384df0f171c8a5ca, type: 3}
     - {fileID: 8300000, guid: 08c3f8e8283d6b94880e22280a446d1b, type: 3}
-  phase4_Voiceovers: []
-  phase5_Voiceovers: []
+  phase4_Voiceovers:
+  - audios: []
+  phase5_Voiceovers:
+  - audios: []
