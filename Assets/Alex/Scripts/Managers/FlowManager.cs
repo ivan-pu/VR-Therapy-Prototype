@@ -102,13 +102,18 @@ public class FlowManager : MonoBehaviour
                     StartPhase(FlowPhase.Phase_4);
                 break;
             case FlowPhase.Phase_4:
-                if (!flow4.isRunning)
-                    StartPhase(FlowPhase.Phase_5);
+                /*if (!flow4.isRunning)
+                    StartPhase(FlowPhase.Phase_5);*/
                 break;
             case FlowPhase.Phase_5:
                 if (!flow5.isRunning)
                     StartPhase(FlowPhase.Idle);
                 break;
         }
+    }
+
+    public bool IsFlow4Finish()
+    {
+        return !flow4.isRunning;
     }
 }
